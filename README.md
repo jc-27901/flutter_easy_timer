@@ -1,6 +1,6 @@
-# 🎯 Countdown Timer Widget
+# 🎯 Easy Timer Widget
 
-[![pub package](https://img.shields.io/pub/v/countdown_timer_widget.svg)](https://pub.dev/packages/countdown_timer_widget)
+[![pub package](https://img.shields.io/pub/v/countdown_timer_widget.svg)](https://pub.dev/packages/flutter_easy_timer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 A beautiful, highly customizable countdown timer widget for Flutter with iOS 26 style glass UI support. Perfect for fitness apps, cooking timers, productivity tools, and any application that needs an elegant countdown display.
@@ -28,7 +28,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  countdown_timer_widget: ^1.0.0
+  flutter_easy_timer: ^1.0.0
 ```
 
 Then run:
@@ -40,7 +40,7 @@ flutter pub get
 Or install it from the command line:
 
 ```bash
-flutter pub add countdown_timer_widget
+flutter pub add flutter_easy_timer
 ```
 
 ## 🚀 Quick Start
@@ -48,13 +48,13 @@ flutter pub add countdown_timer_widget
 Import the package:
 
 ```dart
-import 'package:countdown_timer_widget/countdown_timer_widget.dart';
+import 'package:flutter_easy_timer/flutter_easy_timer.dart';
 ```
 
 Use the widget:
 
 ```dart
-CountdownTimerWidget(
+FlutterEasyTimerWidget(
   durationSeconds: 60,
   title: 'Workout Timer',
 )
@@ -66,18 +66,18 @@ That's it! The timer will start automatically.
 
 ### 1️⃣ Basic Usage
 
-The simplest way to use the countdown timer:
+The simplest way to use the flutter easy timer:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:countdown_timer_widget/countdown_timer_widget.dart';
+import 'package:flutter_easy_timer/flutter_easy_timer.dart';
 
 class MyTimerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: CountdownTimerWidget(
+        child: FlutterEasyTimerWidget(
           durationSeconds: 60, // 1 minute
           title: 'Basic Timer',
         ),
@@ -92,7 +92,7 @@ class MyTimerPage extends StatelessWidget {
 Personalize your timer with custom colors:
 
 ```dart
-CountdownTimerWidget(
+FlutterEasyTimerWidget(
   durationSeconds: 300, // 5 minutes
   title: 'Meditation Timer',
   
@@ -128,7 +128,7 @@ Container(
     ),
   ),
   child: Center(
-    child: CountdownTimerWidget(
+    child: FlutterEasyTimerWidget(
       durationSeconds: 180, // 3 minutes
       title: 'Glass Timer',
       
@@ -165,7 +165,7 @@ class ManualTimerPage extends StatefulWidget {
 }
 
 class _ManualTimerPageState extends State<ManualTimerPage> {
-  final GlobalKey<_CountdownTimerWidgetState> _timerKey = GlobalKey();
+  final GlobalKey _timerKey = GlobalKey();
   bool _hasStarted = false;
 
   @override
@@ -175,7 +175,7 @@ class _ManualTimerPageState extends State<ManualTimerPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CountdownTimerWidget(
+            FlutterEasyTimerWidget(
               key: _timerKey,
               durationSeconds: 600, // 10 minutes
               title: 'Study Timer',
@@ -218,10 +218,10 @@ The timer automatically formats time based on duration:
 
 ```dart
 // Shows as MM:SS (e.g., 05:30)
-CountdownTimerWidget(durationSeconds: 330)
+FlutterEasyTimerWidget(durationSeconds: 330)
 
 // Shows as HH:MM:SS (e.g., 01:30:00)
-CountdownTimerWidget(durationSeconds: 5400)
+FlutterEasyTimerWidget(durationSeconds: 5400)
 ```
 
 ### 6️⃣ Multiple Timers
@@ -232,13 +232,13 @@ Use multiple timers on the same screen:
 Row(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
-    CountdownTimerWidget(
+    FlutterEasyTimerWidget(
       durationSeconds: 60,
       title: 'Exercise',
       size: 200,
       timerColor: Colors.red,
     ),
-    CountdownTimerWidget(
+    FlutterEasyTimerWidget(
       durationSeconds: 30,
       title: 'Rest',
       size: 200,
@@ -254,14 +254,14 @@ The timer automatically adapts to your app's theme:
 
 ```dart
 // Light mode
-CountdownTimerWidget(
+FlutterEasyTimerWidget(
   durationSeconds: 120,
   timerColor: Colors.blue,
   boundaryColor: Colors.blue.shade700,
 )
 
 // Dark mode
-CountdownTimerWidget(
+FlutterEasyTimerWidget(
   durationSeconds: 120,
   timerColor: Colors.blue.shade300,
   boundaryColor: Colors.blue.shade500,
@@ -286,7 +286,7 @@ class WorkoutTimer extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: CountdownTimerWidget(
+          child: FlutterEasyTimerWidget(
             durationSeconds: 1800, // 30 minutes
             title: '💪 HIIT WORKOUT',
             size: 320,
@@ -366,9 +366,9 @@ class WorkoutTimer extends StatelessWidget {
 **Note:** To call `start()`, you need to provide a `GlobalKey`:
 
 ```dart
-final timerKey = GlobalKey<_CountdownTimerWidgetState>();
+final timerKey = GlobalKey();
 
-CountdownTimerWidget(
+FlutterEasyTimerWidget(
   key: timerKey,
   autoStart: false,
   ...
@@ -471,14 +471,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/countdown_timer_widget/issues)
-- **Email:** your.email@example.com
-- **Documentation:** [Full API Docs](https://pub.dev/documentation/countdown_timer_widget/latest/)
+- **Issues:** [GitHub Issues](https://github.com/jc-27901/flutter_easy_timer/issues)
+- **Email:** jaychhatrola27@gmail.com
+- **Documentation:** [Full API Docs](https://pub.dev/documentation/flutter_easy_timer/latest/)
 
 ## ⭐ Show Your Support
 
-If you like this package, please give it a ⭐ on [GitHub](https://github.com/yourusername/countdown_timer_widget) and a 👍 on [pub.dev](https://pub.dev/packages/countdown_timer_widget)!
+If you like this package, please give it a ⭐ on [GitHub](https://github.com/jc-27901/flutter_easy_timer) and a 👍 on [pub.dev](https://pub.dev/packages/flutter_easy_timer)!
 
 ---
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by Jayyy
