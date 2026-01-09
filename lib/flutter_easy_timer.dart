@@ -204,7 +204,7 @@ class _FlutterEasyTimerWidgetState extends State<FlutterEasyTimerWidget> {
     final effectiveTimerColor = widget.timerColor ?? theme.colorScheme.onPrimary;
     final effectiveTextColor = widget.textColor ?? theme.colorScheme.onPrimary;
     final effectiveTitleColor = widget.titleColor ?? theme.colorScheme.onPrimary;
-    final effectiveDurationTextColor = widget.durationTextColor ?? theme.colorScheme.onPrimary.withOpacity(0.6);
+    final effectiveDurationTextColor = widget.durationTextColor ?? theme.colorScheme.onPrimary.withValues(alpha: 0.6);
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -289,10 +289,10 @@ class _FlutterEasyTimerWidgetState extends State<FlutterEasyTimerWidget> {
     final effectiveTimerColor = widget.timerColor ?? Colors.white;
     final effectiveTextColor = widget.textColor ?? Colors.white;
     final effectiveTitleColor = widget.titleColor ?? Colors.white;
-    final effectiveDurationTextColor = widget.durationTextColor ?? Colors.white.withOpacity(0.7);
+    final effectiveDurationTextColor = widget.durationTextColor ?? Colors.white.withValues(alpha: 0.7);
     final gradientColors = widget.glassGradientColors ?? [
-      Colors.white.withOpacity(0.1),
-      Colors.white.withOpacity(0.05),
+      Colors.white.withValues(alpha: 0.1),
+      Colors.white.withValues(alpha: 0.05),
     ];
 
     return Column(
@@ -329,12 +329,12 @@ class _FlutterEasyTimerWidgetState extends State<FlutterEasyTimerWidget> {
                   colors: gradientColors,
                 ),
                 border: Border.all(
-                  color: widget.boundaryColor ?? Colors.white.withOpacity(0.2),
+                  color: widget.boundaryColor ?? Colors.white.withValues(alpha: 0.2),
                   width: widget.boundaryWidth ?? 2.0,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.black.withValues(alpha:0.1),
                     blurRadius: 20,
                     spreadRadius: 0,
                   ),
@@ -358,7 +358,7 @@ class _FlutterEasyTimerWidgetState extends State<FlutterEasyTimerWidget> {
                             strokeCap: StrokeCap.round,
                             value: reversedProgress,
                             strokeWidth: 20,
-                            backgroundColor: Colors.white.withOpacity(0.1),
+                            backgroundColor: Colors.white.withValues(alpha:0.1),
                             valueColor: AlwaysStoppedAnimation<Color>(effectiveTimerColor),
                           ),
                         ),
@@ -371,7 +371,7 @@ class _FlutterEasyTimerWidgetState extends State<FlutterEasyTimerWidget> {
                             letterSpacing: 1,
                             shadows: [
                               Shadow(
-                                color: Colors.black.withOpacity(0.2),
+                                color: Colors.black.withValues(alpha:0.2),
                                 offset: const Offset(0, 2),
                                 blurRadius: 4,
                               ),
@@ -393,7 +393,7 @@ class _FlutterEasyTimerWidgetState extends State<FlutterEasyTimerWidget> {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: Colors.white.withOpacity(widget.glassOpacity),
+            color: Colors.white.withValues(alpha:widget.glassOpacity),
           ),
           child: Text(
             _formatTime(Duration(seconds: _totalSeconds)),
