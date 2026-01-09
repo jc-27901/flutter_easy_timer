@@ -1,6 +1,6 @@
 name: flutter_easy_timer
 description: A beautiful, customizable countdown timer widget with glass UI support for Flutter applications.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/jc-27901/flutter_easy_timer
 
 environment:
