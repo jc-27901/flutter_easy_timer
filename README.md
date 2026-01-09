@@ -16,11 +16,9 @@ A beautiful, highly customizable countdown timer widget for Flutter with iOS 26 
 - 🌈 **Gradient Support** - Beautiful gradient backgrounds in glass mode
 - 💪 **Performance Optimized** - Efficient rendering with minimal overhead
 
-## 📸 Screenshots
 
-| Default Timer | Custom Colors | Glass UI | Manual Start |
-|--------------|---------------|----------|--------------|
-| ![Default](screenshots/default.png) | ![Custom](screenshots/custom.png) | ![Glass](screenshots/glass.png) | ![Manual](screenshots/manual.png) |
+## Demo 
+![Demo](demo.gif)
 
 ## 📦 Installation
 

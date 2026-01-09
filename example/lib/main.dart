@@ -170,7 +170,7 @@ class MinimalTimerDemo extends StatelessWidget {
             const Spacer(),
             FlutterEasyTimerWidget(
               durationSeconds: 150, // 25 minutes
-              size: 320,
+              size: 280,
               timerColor: Colors.deepPurple.shade300,
               boundaryColor: Colors.white.withValues(alpha:0.1),
               boundaryWidth: 1.5,
@@ -268,9 +268,9 @@ class WorkoutTimerDemo extends StatelessWidget {
       child: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 40),
+            const SizedBox(height: 10),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               decoration: BoxDecoration(
                 color: Colors.white.withValues(alpha:0.2),
                 borderRadius: BorderRadius.circular(30),
@@ -295,7 +295,7 @@ class WorkoutTimerDemo extends StatelessWidget {
                   'Round 1',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 28,
+                    fontSize: 20,
                     fontWeight: FontWeight.w300,
                   ),
                 )
@@ -303,19 +303,19 @@ class WorkoutTimerDemo extends StatelessWidget {
                     .fadeIn(duration: 1000.ms)
                     .then()
                     .fadeOut(duration: 1000.ms),
-                const SizedBox(height: 30),
+                const SizedBox(height: 16),
                 FlutterEasyTimerWidget(
                   durationSeconds: 45,
                   title: 'BURPEES',
-                  size: 340,
+                  size: 280,
                   timerColor: Colors.white,
                   boundaryColor: Colors.white,
                   boundaryWidth: 6.0,
                   textColor: Colors.white,
                   titleColor: Colors.white,
                   durationTextColor: Colors.white.withValues(alpha:0.8),
-                  timerFontSize: 72,
-                  titleFontSize: 32,
+                  timerFontSize: 56,
+                  titleFontSize: 26,
                   durationFontSize: 28,
                   onFinished: () {
                     debugPrint('Exercise complete!');
@@ -490,7 +490,7 @@ class GlassMorphismDemo extends StatelessWidget {
                   FlutterEasyTimerWidget(
                     durationSeconds: 90, // 10 minutes
                     enableGlassUI: true,
-                    size: 360,
+                    size: 280,
                     glassBlurIntensity: 20.0,
                     glassOpacity: 0.25,
                     glassGradientColors: [
